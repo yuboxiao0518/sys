@@ -1,0 +1,8 @@
+com\primeton\sys\model\AuthRole.class
+com\primeton\sys\model\AuthRoleOperation.class
+com\primeton\sys\model\AuthOperation.class
+com\primeton\sys\model\AuthUser.class
+com\primeton\sys\model\IArticle.class
+com\primeton\sys\common\App.class
+com\primeton\sys\model\IFile.class
+com\primeton\sys\model\ILog.class
