@@ -6,10 +6,19 @@
     </div>
   </div>
 </div>
+<div id="app">
+  {{ message }}
+</div>
 <div class="openAppGrid">
 	<div id="openAppGrid"></div>
 </div>
 <script type="text/javascript">
+	var app = new Vue({
+	  el: '#app',
+	  data: {
+	    message: 'Hello Vue!'
+	  }
+	})
     $(function (){
         $("#openAppGrid").sgrid({
             columns:[

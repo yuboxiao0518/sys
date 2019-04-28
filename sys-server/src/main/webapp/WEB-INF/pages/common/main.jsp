@@ -92,6 +92,7 @@
 	<script src="${ctx}/assets/js/ueditor/ueditor.config.js" type="text/javascript"></script>
 	<script src="${ctx}/assets/js/ueditor/ueditor.all.min.js" type="text/javascript"> </script>
 	<script src="${ctx}/assets/js/ueditor/lang/zh-cn/zh-cn.js" type="text/javascript"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <style type="text/css"> 
 		#iconview{display:none;}
 		#imgview{display:none;}
@@ -178,7 +179,6 @@
 	function index(){
     	window.open("../druid/login.html");
     }
-    
     /*var headBtn = $("#headBtn");
 	new AjaxUpload(headBtn,{
 		action: _urlPath+"/admin/uploadPic?type=1&id=" + ${loginUser.id},

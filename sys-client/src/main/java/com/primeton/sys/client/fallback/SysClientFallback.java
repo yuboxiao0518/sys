@@ -16,7 +16,7 @@ public class SysClientFallback implements SysClient {
 	@Override
 	public String queryPage() {
 		// TODO Auto-generated method stub
-		return null;
+		return "sorry";
 	}
 
 }

@@ -961,21 +961,6 @@ public class DateUtil {
 		return mi*60 + ss;
 	}
 	
-	public static void main(String[] args) {
-		System.out.println(isInDate(getDate("2016-08-01 09:02:00", "yyyy-MM-dd HH:mm:ss"), "09:00:00", "23:00:00"));
-		System.out.println(isInDate("2016-08-01 09:02:00", "09:00:00", "23:00:00"));
-//		System.out.println(getFirstDayOfMonth(2016, 5));
-//		System.out.println(getLastDayOfMonth(2016, 5));
-//		System.out.println(getYear(new Date()));
-//		System.out.println(getMonth(new Date()));
-//		System.out.println(getLongToStr(1463381088088L, yyyy_MM_dd_HH_mm_ss_EN));
-//		System.out.println(getLongToStr(1463381148088L, yyyy_MM_dd_HH_mm_ss_EN));
-//		System.out.println(getDateOfMin("2015-06-07 10:06:00", 5, "yyyy-MM-dd HH:mm:ss"));
-//		DateFormat df = getDateFormat("yyyy-MM-dd HH:mm:ss");
-//		System.out.println(df.format(getPointHourTime(2)));
-//		System.out.println(getDateStringOfDay(-1, "yyyy-MM-dd HH:mm:ss"));
-//		System.out.println(getLongToStr(getPointDateHourTime(1, 9), "yyyy-MM-dd HH:mm:ss"));
-	}
 	
 	public static boolean isDate(String dateTimeStr, String formatStr) {
 		DateFormat df = getDateFormat(formatStr);

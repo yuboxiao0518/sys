@@ -46,6 +46,11 @@
 		                <a tabindex="-1" href="javascript:goPage('admin/log/mainPage')"><span class="mm-text">用户日志</span></a>
 		            </li>
 		        </ul>
+		        <ul>
+		            <li opCode="0302">
+		                <a tabindex="-1" href="javascript:goPage('admin/vue/mainPage')"><span class="mm-text">vue</span></a>
+		            </li>
+		        </ul>
 		    </li>
 		</ul>
 	</div>

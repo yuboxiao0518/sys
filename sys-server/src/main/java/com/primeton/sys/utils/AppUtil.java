@@ -267,31 +267,4 @@ public class AppUtil {
 		return Double.parseDouble(formatValue(source));
 	}
 
-	public static void main(String[] args) {
-		for(int i = 1; i <= 5; i++){
-			System.out.println(getUuid());
-		}
-//		System.out.println(getUUID(5));
-		// Set<String> sets = new HashSet<String>();
-		// for(int i = 0; i < 1000000; i ++){
-		// sets.add(getRandomString(20));
-		// }
-		// System.out.println(sets.size());
-		// System.out.println(getRandomString(20));
-//		AuthOperation op1 = new AuthOperation();
-//		op1.setOpCode("002");
-//		op1.setOpid(1);
-//
-//		AuthOperation op2 = new AuthOperation();
-//		op2.setOpCode("002");
-//		op2.setOpid(1);
-//		try {
-//			System.out.println(entityIsEquals(op1, op2));
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-		System.out.println(divide(10, "0.75"));
-	}
-
 }

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,7 @@ import com.primeton.sys.model.AuthRole;
 import com.primeton.sys.model.AuthUser;
 import com.primeton.sys.annotation.ServiceLog;
 import com.primeton.sys.common.Constant;
+import com.primeton.sys.config.RabbitConfig;
 import com.primeton.sys.support.DataCache;
 import com.primeton.sys.mapper.AuthRoleMapper;
 import com.primeton.sys.mapper.AuthUserMapper;
@@ -47,6 +49,8 @@ public class UserService extends AbstratService<AuthUser> {
 	private AuthRoleMapper roleMapper;
 	@Autowired
 	private DataCache dataCache;
+	@Autowired
+	private AmqpTemplate amqpTemplate;
 
 	@Override
 	@ServiceLog("查询用户列表")
@@ -63,6 +67,7 @@ public class UserService extends AbstratService<AuthUser> {
 		if (null == $user) {
 			user.setAddtime(DateUtil.getCurDateTime());
 			save(user);
+			amqpTemplate.convertAndSend(Constant.FANOUT_EXCHANGE, "", user);
 		} else {
 			result = "用户名已存在";
 		}
